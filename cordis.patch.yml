@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-workspace-search
+      name: '@itsyuyi/dsh-workspace-search'

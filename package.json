@@ -1,0 +1,72 @@
+{
+  "name": "@itsyuyi/dsh-workspace-search",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: workspace session search — keyword search over session titles, user questions, and assistant replies, with an overlay search palette and jump-to-match navigation.",
+  "license": "MIT",
+  "author": "itsyuyi <itsyuyi@126.com>",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "Workspace Search",
+    "description": "Search session titles and session contents from a sidebar search palette, with jump-to-match navigation."
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "session-search",
+    "workspace-search",
+    "full-text-search",
+    "sidebar"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5",
+    "react": ">=18.2.0 <19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsyuyi/dsh-workspace-search.git"
+  },
+  "homepage": "https://github.com/itsyuyi/dsh-workspace-search#readme",
+  "bugs": {
+    "url": "https://github.com/itsyuyi/dsh-workspace-search/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-shortcuts"
+      ]
+    }
+  }
+}
