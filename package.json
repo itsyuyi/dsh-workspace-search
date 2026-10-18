@@ -1,6 +1,6 @@
 {
   "name": "@itsyuyi/dsh-workspace-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DeepSeek Harness plugin: workspace session search — keyword search over session titles, user questions, and assistant replies, with an overlay search palette and jump-to-match navigation.",
   "license": "MIT",
   "author": "itsyuyi <itsyuyi@126.com>",
